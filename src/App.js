@@ -1,9 +1,14 @@
 import React from "react";
 
-import { Navbar } from "./components";
+import { Navbar, AddEmployee } from "./components";
 
 const App = () => {
-	return <Navbar />;
+	return (
+		<>
+			<Navbar />
+			<AddEmployee />
+		</>
+	);
 };
 
 export default App;
