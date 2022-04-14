@@ -1,12 +1,20 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Navbar, AddEmployee } from "./components";
+import { Navbar, AddEmployee, EmployeeList } from "./components";
 
 const App = () => {
 	return (
 		<>
-			<Navbar />
-			<AddEmployee />
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route index element={<EmployeeList />} />
+					<Route path="/" element={<EmployeeList />} />
+					<Route path="/employeeList" element={<EmployeeList />} />
+					<Route path="/addEmployee" element={<AddEmployee />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 };
