@@ -32,6 +32,7 @@ const EmployeeList = () => {
 			if (employees) {
 				setEmployees((prevElement) => {
 					console.log(prevElement);
+					alert("Deleted Successfully!");
 					return prevElement.filter((employee) => employee.id !== id);
 				});
 			}
